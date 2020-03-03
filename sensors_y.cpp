@@ -5,26 +5,22 @@ using namespace std;
 
 int main()
 {
-int y[54];
-int count1=0,j=0;
+float y[54];
+int count1=0,j;
+string line1;
 
-ifstream inputFile1;
-inputFile1.open("mote_locs_y.txt");
+ifstream file1("mote_locs_y.txt");
 
-if(!inputFile1)
- cout << "FILE READING ERROR";
-else
+while(getline(file1,line1))
 {
-while(!inputFile1.eof())
-{
-inputFile1 >> y[count1];
-count1++;
-}
+  y[count1] = atof(line1.c_str());
+  count1++;
 }
 
-for(j=0;j<count1;j++)
+cout << count1 << endl;
+for(j=0;i<count1;j++)
 {
-cout<< " " << y[count1];
+	cout << y[j] << endl;
 }
 
 return 0;
