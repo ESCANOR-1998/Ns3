@@ -5,8 +5,7 @@ using namespace std;
 
 int main()
 {
-    const int no = 54;
-	int x[no],y[no];
+	float x[54],y[54];
 	int count=0,count1=0,i;
 	
 	ifstream inputFile, inputFile1;
@@ -16,13 +15,13 @@ int main()
 	
 	while(!inputFile.eof())
 	{
-		cin >> x[count];
+		inputFile >> x[count];
 		count++;
 	}
 	
 	while(!inputFile1.eof())
 	{
-		cin >> y[count1];
+		inputFile1 >> y[count1];
 		count1++;
 	}
 
