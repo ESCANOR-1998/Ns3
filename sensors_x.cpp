@@ -5,26 +5,22 @@ using namespace std;
 
 int main()
 {
-int x[54];
-int count=0,i=0;
+float x[54];
+int count=0,i;
+string line;
 
-ifstream inputFile;
-inputFile.open("mote_locs_x.txt");
+ifstream file("mote_locs_x.txt");
 
-if(!inputFile)
- cout << "FILE READING ERROR";
-else
+while(getline(file,line))
 {
-while(!inputFile.eof())
-{
-inputFile >> x[count];
-count++;
-}
+  x[count] = atof(line.c_str());
+  count++;
 }
 
+cout << count << endl;
 for(i=0;i<count;i++)
 {
-cout<< " " << x[count];
+	cout << x[i] << endl;
 }
 
 return 0;
