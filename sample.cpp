@@ -7,23 +7,23 @@ int main()
 {
     const int no = 54;
 	int x[no],y[no];
-	int count,count1,i;
+	int count=0,count1=0,i;
 	
 	ifstream inputFile, inputFile1;
 	inputFile.open("mote_locs_x.txt");
 	inputFile1.open("mote_locs_y.txt")
 	
-	count= 0;
+	
 	while(!inputFile.eof())
 	{
 		cin >> x[count];
 		count++;
 	}
 	
-	while(!inputFile.eof())
+	while(!inputFile1.eof())
 	{
 		cin >> y[count1];
-		count++;
+		count1++;
 	}
 
 	cout<< " " <<count;
